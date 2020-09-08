@@ -3,10 +3,10 @@
 set -e
 
 curl -O https://raw.githubusercontent.com/spinnaker/halyard/master/install/debian/InstallHalyard.sh
-sudo bash InstallHalyard.sh --user ubuntu
+sudo bash InstallHalyard.sh --user uadmin
 curl -fsSL get.docker.com -o get-docker.sh
 sh get-docker.sh
-sudo usermod -aG docker ubuntu
+sudo usermod -aG docker uadmin
 sudo docker run -p 127.0.0.1:9090:9000 -d --name minio1 -v /mnt/data:/data -v /mnt/config:/root/.minio minio/minio server /data
 
 sudo apt-get -y install jq apt-transport-https
