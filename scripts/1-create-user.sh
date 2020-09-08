@@ -1,8 +1,8 @@
 #!/bin/bash
 
-groupadd ubuntu
-useradd -g ubuntu -G admin -s /bin/bash -d /home/ubuntu ubuntu
-mkdir -p /home/ubuntu
-cp -r /root/.ssh /home/ubuntu/.ssh
-chown -R ubuntu:ubuntu /home/ubuntu
-echo "ubuntu	ALL=(ALL:ALL) NOPASSWD:ALL" >> /etc/sudoers
+groupadd uadmin
+useradd -g uadmin -G admin -s /bin/bash -d /home/uadmin uadmin
+mkdir -p /home/uadmin
+cp -r /root/.ssh /home/uadmin/.ssh
+chown -R uadmin:uadmin /home/uadmin
+echo "uadmin	ALL=(ALL:ALL) NOPASSWD:ALL" >> /etc/sudoers
