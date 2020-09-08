@@ -2,6 +2,9 @@
 
 set -e
 
+sudo apt-get -y install openjdk-8-jre
+sudo apt-get -y install openjdk-8-jdk
+  
 curl -O https://raw.githubusercontent.com/spinnaker/halyard/master/install/debian/InstallHalyard.sh
 sudo bash InstallHalyard.sh --user uadmin
 curl -fsSL get.docker.com -o get-docker.sh
